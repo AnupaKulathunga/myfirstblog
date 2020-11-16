@@ -104,7 +104,7 @@ module.exports = {
                     // disable, if you need to save memory
                     useImageCache: true,
                 }
-                ],
+                ]
             },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
