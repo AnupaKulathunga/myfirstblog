@@ -94,6 +94,16 @@ module.exports = {
                     {
                         resolve: `gatsby-rehype-prismjs`,
                     },
+                    {
+                resolve: `gatsby-rehype-inline-images`,
+                // all options are optional and can be omitted
+                options: {
+                    // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
+                    // maxWidth: 2000,
+                    withWebp: true,
+                    // disable, if you need to save memory
+                    useImageCache: true,
+                },
                 ],
             },
         },
