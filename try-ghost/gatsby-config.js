@@ -56,9 +56,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-sharp`,
-        },
-        {
             resolve: `gatsby-theme-try-ghost`,
             options: {
                 ghostConfig: ghostConfig,
@@ -84,9 +81,6 @@ module.exports = {
             resolve: `gatsby-theme-ghost-members`,
         },
         {
-            resolve: `gatsby-plugin-sharp`,
-        },
-        {
             resolve: `gatsby-transformer-rehype`,
             options: {
                 filter: node => (
@@ -95,32 +89,10 @@ module.exports = {
                 ),
                 plugins: [
                     {
-                    resolve: `gatsby-rehype-inline-images`,
-                    // all options are optional and can be omitted
-                    options: {
-                             // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
-                            // maxWidth: 2000,
-                             withWebp: true,
-                            // disable, if you need to save memory
-                            useImageCache: true,
-                         }
-                     },
-                    {
                         resolve: `gatsby-rehype-ghost-links`,
                     },
                     {
                         resolve: `gatsby-rehype-prismjs`,
-                    },
-                    {
-                        resolve: `gatsby-rehype-inline-images`,
-                        // all options are optional and can be omitted
-                        options: {
-                            // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
-                            // maxWidth: 2000,
-                            withWebp: true,
-                            // disable, if you need to save memory
-                            useImageCache: true,
-                        }
                     },
                 ],
             },
