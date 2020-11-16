@@ -56,6 +56,9 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-sharp`,
+        },
+        {
             resolve: `gatsby-theme-try-ghost`,
             options: {
                 ghostConfig: ghostConfig,
@@ -88,6 +91,17 @@ module.exports = {
                     node.internal.type === `GhostPage`
                 ),
                 plugins: [
+                    {
+                    resolve: `gatsby-rehype-inline-images`,
+                    // all options are optional and can be omitted
+                    options: {
+                             // all images larger are scaled down to maxWidth (default: maxWidth = imageWidth)
+                            // maxWidth: 2000,
+                             withWebp: true,
+                            // disable, if you need to save memory
+                            useImageCache: true,
+                         }
+                     },
                     {
                         resolve: `gatsby-rehype-ghost-links`,
                     },
