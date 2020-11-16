@@ -103,7 +103,7 @@ module.exports = {
                     withWebp: true,
                     // disable, if you need to save memory
                     useImageCache: true,
-                },
+                }
                 ],
             },
         },
